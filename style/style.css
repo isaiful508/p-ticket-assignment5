@@ -7,7 +7,7 @@
 /* // <uniquifier>: Use a uniquifier for the class name */
 /* // <weight>: Use a value from 100 to 900 */
 
-.inter-<uniquifier> {
+.inter-uniquifier{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -21,9 +21,21 @@
 /* // <uniquifier>: Use a uniquifier for the class name
 // <weight>: Use a value from 100 to 900 */
 
-.raleway-<uniquifier> {
+.font-extarBold {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 800;
+  font-style: normal;
+}
+.font-bold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.font-mediumBold {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
 }
