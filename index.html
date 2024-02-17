@@ -15,9 +15,43 @@
 
 <body>
     <header>
-        <nav>
-
-        </nav>
+        <!-- nav bar start -->
+        <nav class="container mx-auto mt-8">
+            <div class="navbar bg-base-100">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                  </div>
+                  <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Destination</li>
+                    <li>Search</li>
+                    
+                  </ul>
+                </div>
+                <a class="btn  btn-ghost lg:text-3xl font-bold">P-Ticket</a>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 space-x-11">
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Pages</li>
+                  <li>Destination</li>
+                  <li>Search</li>
+                </ul>
+              </div>
+              <div class="navbar-end space-x-5">
+                <img class="hidden lg:flex" src="./Images/search.svg" alt="">
+                <a class="btn bg-[#1DD1001A] text-[#1DD100]">Bus <img src="./images/bus-icon.png" alt=""></a>
+              </div>
+            </div>
+          </nav>
+        <!-- nav bar ended -->
     </header>
     <main>
 
@@ -29,7 +63,7 @@
 
 
     <!-- js file link -->
-<script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js"></script>
 
 </body>
 
