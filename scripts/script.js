@@ -7,7 +7,8 @@ for (const seat of allSeats) {
         // get the number
         count = count + 1;
         // set text into display using function
-        setInnerText('seat-count', count)
+        setInnerText('seat-count', count);
+        seat.classList.add('bg-[#1dd100]')
 
         // inceiment from seats left
         const totalSeat = document.getElementById('total-seats');
@@ -23,10 +24,12 @@ for (const seat of allSeats) {
 
         //    ticket price calculation
         const seatPriceText = document.getElementById('seat-price').innerText;
-        const seatPrice = parseInt(seatPriceText);
+        const seatPrice = parseFloat(seatPriceText);
         const totalTicketPrice = count * seatPrice
         setInnerText('total-price', totalTicketPrice);
-
+        // grand total display
+        setInnerText('grand-total', totalTicketPrice);
+        
 
 
 
