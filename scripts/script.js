@@ -1,57 +1,4 @@
-// const allSeats = document.getElementsByClassName('seats');
 
-// let count = 0;
-// // let selectedSeats = [];
-// for (const seat of allSeats) {
-//     seat.addEventListener('click', function (event) {
-//         // get the number
-//         count = count + 1;
-//         // set text into display using function
-//         setInnerText('seat-count', count);
-//         // seat.classList.add('bg-[#1dd100]')
-
-//         // inceiment from seats left
-//         const totalSeat = document.getElementById('total-seats');
-//         const totalSeatText = totalSeat.innerText;
-//         const avaiableSeat = parseInt(totalSeatText);
-//         const remainingSeat = avaiableSeat - 1;
-//         setInnerText('total-seats', remainingSeat);
-
-
-//         //    set tbody through append
-//         const seatName = seat.innerText;
-//         setTableData(seatName);
-
-//         //    ticket price calculation
-//         const seatPriceText = document.getElementById('seat-price').innerText;
-//         const seatPrice = parseFloat(seatPriceText);
-//         const totalTicketPrice = count * seatPrice
-//         setInnerText('total-price', totalTicketPrice);
-//         // grand total display
-//         setInnerText('grand-total', totalTicketPrice);
-
-//         // condition apply for seat select
-//         if(count <= 4){
-//             seat.classList.add('bg-[#1dd100]');
-//         }
-//     //     if (count === 4) {
-//     //         for (const seat of allSeats) {
-//     //             seat.removeEventListener('click', seatClickHandler);
-//     //         }
-//     //     }
-
-
-//     // for (const seat of allSeats) {
-//     //     seat.addEventListener('click', seatClickHandler);
-//     // }
-
-
-
-
-
-
-//     })
-// }
 
 const allSeats = document.getElementsByClassName('seats');
 
@@ -116,7 +63,7 @@ applyBtn.addEventListener('click', function () {
             let discountPrice = willDiscountPrice - (willDiscountPrice * 15) / 100;
             setInnerText('grand-total', discountPrice);
             
-            // append discound price
+            // append discount price
             const discountDiv = document.getElementById('priceDiscountContainer');
 
             const firstH1 = document.createElement('h1');
@@ -130,10 +77,11 @@ applyBtn.addEventListener('click', function () {
             
             
             
-            // hide the button
-            applyBtn.classList.add('hidden');
+            // hide the input field
+            const labelHide = document.getElementById('label-hide');
+            labelHide.classList.add('hidden');
             
-            // remove text in input field
+           
             
 
         }else if(inputFieldValue === 'Couple 20'){
@@ -151,8 +99,10 @@ applyBtn.addEventListener('click', function () {
             discountDiv.appendChild(firstH1);
             discountDiv.appendChild(secondH1);
 
-            // hide the button
-            applyBtn.classList.add('hidden');
+            // hide the inputfield
+            const labelHide = document.getElementById('label-hide');
+            labelHide.classList.add('hidden');
+            
 
         }
         
@@ -167,3 +117,38 @@ applyBtn.addEventListener('click', function () {
 
 
 })
+
+
+// modal and form input
+
+  
+  function modalHide() {
+    location.reload()
+  }
+  
+  
+  function formSubmit(e) {
+    e.preventDefault();
+  
+    // name
+    let name = document.getElementById("name");
+    let nameValue = name.value;
+    // number
+    let number = document.getElementById("phone-number");
+    let numberValue = number.value;
+    // email
+    let email = document.getElementById("email");
+    let emailValue = email.value;
+    let value = getValue("seat-count");
+  
+    if (numberValue.length == 11 && numberValue > 0 && value > 0 && nameValue !== "" &&  emailValue !== "") {
+      console.log("Form submitted successfully.");
+      modal.showModal()
+      let inputs = document.querySelectorAll("input");
+      inputs.forEach(function(input) {
+        input.value = '';
+      });
+    } else {
+      alert("Please fill in all required fields.");
+    }
+  }
