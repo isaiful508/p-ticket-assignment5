@@ -1,14 +1,14 @@
 const allSeats = document.getElementsByClassName('seats');
 
 let count = 0;
-let ticketPrice = 550;
+// let selectedSeats = [];
 for (const seat of allSeats) {
     seat.addEventListener('click', function (event) {
         // get the number
         count = count + 1;
         // set text into display using function
         setInnerText('seat-count', count);
-        seat.classList.add('bg-[#1dd100]')
+        // seat.classList.add('bg-[#1dd100]')
 
         // inceiment from seats left
         const totalSeat = document.getElementById('total-seats');
@@ -29,6 +29,22 @@ for (const seat of allSeats) {
         setInnerText('total-price', totalTicketPrice);
         // grand total display
         setInnerText('grand-total', totalTicketPrice);
+
+        // condition apply for seat select
+        if(count <= 4){
+            seat.classList.add('bg-[#1dd100]');
+        }
+    //     if (count === 4) {
+    //         for (const seat of allSeats) {
+    //             seat.removeEventListener('click', seatClickHandler);
+    //         }
+    //     }
+    
+    
+    // for (const seat of allSeats) {
+    //     seat.addEventListener('click', seatClickHandler);
+    // }
+
         
 
 
