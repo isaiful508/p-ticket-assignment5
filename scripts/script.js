@@ -115,6 +115,7 @@ applyBtn.addEventListener('click', function () {
         if (inputFieldValue === 'NEW15') {
             let discountPrice = willDiscountPrice - (willDiscountPrice * 15) / 100;
             setInnerText('grand-total', discountPrice);
+            
             // append discound price
             const discountDiv = document.getElementById('priceDiscountContainer');
 
@@ -126,10 +127,14 @@ applyBtn.addEventListener('click', function () {
 
             discountDiv.appendChild(firstH1);
             discountDiv.appendChild(secondH1);
-
-
-
-
+            
+            
+            
+            // hide the button
+            applyBtn.classList.add('hidden');
+            
+            // remove text in input field
+            
 
         }else if(inputFieldValue === 'Couple 20'){
             let discountPrice = willDiscountPrice - (willDiscountPrice * 20) / 100;
@@ -145,6 +150,10 @@ applyBtn.addEventListener('click', function () {
 
             discountDiv.appendChild(firstH1);
             discountDiv.appendChild(secondH1);
+
+            // hide the button
+            applyBtn.classList.add('hidden');
+
         }
         
         else {
