@@ -498,17 +498,22 @@
                                 </tbody>
 
                             </table>
-                            <div class="flex justify-between items-center py-2">
+                            <div id="" class="flex justify-between items-center py-2">
                                 <h1 class="inter-font font-medium">Total Price:</h1>
                                 <h1 class="inter-font font-medium">BDT <span id="total-price">0</span></h1>
+                                
+                            </div>
+                            <div id="priceDiscountContainer" class="flex font-medium justify-between items-center py-2">
+                                <!-- discount price will append by js -->
                             </div>
                         </div>
                         <label
                             class="input outline-none border-none focus:outline-none focus:border-none flex items-center gap-2 mt-3">
-                            <input type="text"
+                            <input id="input-field" type="text"
                                 class="grow outline-none border-none focus:outline-none focus:border-none"
                                 placeholder="Have any coupon?" />
-                            <span class="badge badge-info p-4 rounded-lg bg-[#1DD100] text-white">Apply</span>
+                            <!-- <span class="badge badge-info ">Apply</span> -->
+                            <button  id="apply-btn" class="btn p-4 rounded-lg bg-[#1DD100] text-white">Apply</button>
                         </label>
                         <div class="flex justify-between items-center py-5">
                             <h1 class="inter-font font-medium">Grand total:</h1>

@@ -28,3 +28,13 @@ function setTableData(seatNumber){
 
 
 }
+
+
+// get value
+function getValue(elementId){
+    const element = document.getElementById(elementId);
+    const currentElementText = element.innerText;
+    const value = parseFloat(currentElementText);
+
+    return value;
+}
